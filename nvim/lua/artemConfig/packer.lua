@@ -13,25 +13,36 @@ return require('packer').startup(function(use)
 	  -- or                            , branch = '0.1.x',
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
-
-
-  -- lua/plugins/rose-pine.lua
   use {
-	  "rose-pine/neovim",
-	  name = "rose-pine",
-	  config = function()
-		  vim.cmd("colorscheme rose-pine")
-	  end
+  'lewis6991/gitsigns.nvim',
+  requires = { 'nvim-lua/plenary.nvim' },
+  config = function()
+    require('gitsigns').setup()
+  end
   }
 
+  use {
+    'nvim-telescope/telescope-media-files.nvim',
+    requires = { {'nvim-telescope/telescope.nvim'}, {'nvim-lua/plenary.nvim'} }
+  }
 
+  use {
+    'edluffy/hologram.nvim',
+    config = function()
+      require('hologram').setup{
+        auto_display = true -- show images automatically when file is opened
+      }
+    end
+  }
+  -- lua/plugins/rose-pine.lua
+  
 
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use('nvim-treesitter/playground')
   use('theprimeagen/harpoon')
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
-
+  use {"meatballs/notebook.nvim"}
   use {
     'VonHeikemen/lsp-zero.nvim',
     requires = {
@@ -51,4 +62,5 @@ return require('packer').startup(function(use)
 	{'rafamadriz/friendly-snippets'},
     }
   }
+  use 'stevearc/conform.nvim'
 end)
