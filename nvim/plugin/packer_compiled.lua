@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/Users/artem/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  catppuccin = {
+    loaded = true,
+    path = "/Users/artem/.local/share/nvim/site/pack/packer/start/catppuccin",
+    url = "https://github.com/catppuccin/nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/Users/artem/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -109,6 +114,12 @@ _G.packer_plugins = {
     path = "/Users/artem/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
+  ["gitsigns.nvim"] = {
+    config = { "\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rgitsigns\frequire\0" },
+    loaded = true,
+    path = "/Users/artem/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
   harpoon = {
     loaded = true,
     path = "/Users/artem/.local/share/nvim/site/pack/packer/start/harpoon",
@@ -119,6 +130,18 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/artem/.local/share/nvim/site/pack/packer/start/hologram.nvim",
     url = "https://github.com/edluffy/hologram.nvim"
+  },
+  ["iron.nvim"] = {
+    config = { "\27LJ\2\n‹\6\0\0\b\0\31\00066\0\0\0'\2\1\0B\0\2\0029\1\2\0005\3\r\0005\4\3\0005\5\a\0005\6\5\0005\a\4\0=\a\6\6=\6\b\5=\5\t\0046\5\0\0'\a\n\0B\5\2\0029\5\v\5)\a<\0B\5\2\2=\5\f\4=\4\14\0035\4\15\0=\4\16\0035\4\17\0=\4\18\3B\1\2\0016\1\19\0009\1\20\0019\1\21\1'\3\22\0'\4\23\0'\5\24\0B\1\4\0016\1\19\0009\1\20\0019\1\21\1'\3\22\0'\4\25\0'\5\26\0B\1\4\0016\1\19\0009\1\20\0019\1\21\1'\3\22\0'\4\27\0'\5\28\0B\1\4\0016\1\19\0009\1\20\0019\1\21\1'\3\22\0'\4\29\0'\5\30\0B\1\4\1K\0\1\0\22<cmd>IronHide<cr>\14<space>rh\23<cmd>IronFocus<cr>\14<space>rF\25<cmd>IronRestart<cr>\14<space>rr\22<cmd>IronRepl<cr>\14<space>rs\6n\bset\vkeymap\bvim\14highlight\1\0\1\vitalic\2\fkeymaps\1\0\f\14send_file\14<space>rf\16visual_send\14<space>rc\14interrupt\20<space>r<space>\16send_motion\14<space>rc\acr\17<space>r<cr>\16remove_mark\15<space>rmd\16mark_visual\15<space>rmc\texit\14<space>rq\16mark_motion\15<space>rmc\14send_mark\14<space>rm\14send_line\14<space>rl\nclear\14<space>rx\vconfig\1\0\4\fkeymaps\0\14highlight\0\vconfig\0\23ignore_blank_lines\2\18repl_open_cmd\nright\14iron.view\20repl_definition\vpython\1\0\1\vpython\0\fcommand\1\0\1\fcommand\0\1\2\0\0\vpython\1\0\3\18repl_open_cmd\0\20repl_definition\0\17scratch_repl\2\nsetup\14iron.core\frequire\0" },
+    loaded = true,
+    path = "/Users/artem/.local/share/nvim/site/pack/packer/start/iron.nvim",
+    url = "https://github.com/hkupty/iron.nvim"
+  },
+  ["kanagawa.nvim"] = {
+    config = { "\27LJ\2\n`\0\1\3\0\5\0\0065\1\1\0005\2\0\0=\2\2\0015\2\3\0=\2\4\1L\1\2\0\16NormalFloat\1\0\1\abg\tnone\vNormal\1\0\2\16NormalFloat\0\vNormal\0\1\0\1\abg\tnoneï\1\1\0\4\0\t\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0003\3\4\0=\3\5\2B\0\2\0016\0\6\0009\0\a\0'\2\b\0B\0\2\1K\0\1\0\25colorscheme kanagawa\bcmd\bvim\14overrides\0\1\0\2\16transparent\2\14overrides\0\nsetup\rkanagawa\frequire\0" },
+    loaded = true,
+    path = "/Users/artem/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
+    url = "https://github.com/rebelot/kanagawa.nvim"
   },
   ["lsp-zero.nvim"] = {
     loaded = true,
@@ -135,10 +158,22 @@ _G.packer_plugins = {
     path = "/Users/artem/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  ["mini.nvim"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/artem/.local/share/nvim/site/pack/packer/opt/mini.nvim",
+    url = "https://github.com/nvim-mini/mini.nvim"
+  },
   ["notebook.nvim"] = {
     loaded = true,
     path = "/Users/artem/.local/share/nvim/site/pack/packer/start/notebook.nvim",
     url = "https://github.com/meatballs/notebook.nvim"
+  },
+  ["nvim-autopairs"] = {
+    config = { "\27LJ\2\n<\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0" },
+    loaded = true,
+    path = "/Users/artem/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
+    url = "https://github.com/windwp/nvim-autopairs"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -149,6 +184,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/artem/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-numbertoggle"] = {
+    loaded = true,
+    path = "/Users/artem/.local/share/nvim/site/pack/packer/start/nvim-numbertoggle",
+    url = "https://github.com/sitiom/nvim-numbertoggle"
   },
   ["nvim-treesitter"] = {
     loaded = true,
@@ -170,6 +210,14 @@ _G.packer_plugins = {
     path = "/Users/artem/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["render-markdown.nvim"] = {
+    config = { "\27LJ\2\nA\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\20render-markdown\frequire\0" },
+    load_after = {},
+    loaded = true,
+    needs_bufread = false,
+    path = "/Users/artem/.local/share/nvim/site/pack/packer/opt/render-markdown.nvim",
+    url = "https://github.com/MeanderingProgrammer/render-markdown.nvim"
+  },
   ["telescope-media-files.nvim"] = {
     loaded = true,
     path = "/Users/artem/.local/share/nvim/site/pack/packer/start/telescope-media-files.nvim",
@@ -179,6 +227,12 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/artem/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["toggleterm.nvim"] = {
+    config = { "\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15toggleterm\frequire\0" },
+    loaded = true,
+    path = "/Users/artem/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
+    url = "https://github.com/akinsho/toggleterm.nvim"
   },
   undotree = {
     loaded = true,
@@ -193,10 +247,39 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: kanagawa.nvim
+time([[Config for kanagawa.nvim]], true)
+try_loadstring("\27LJ\2\n`\0\1\3\0\5\0\0065\1\1\0005\2\0\0=\2\2\0015\2\3\0=\2\4\1L\1\2\0\16NormalFloat\1\0\1\abg\tnone\vNormal\1\0\2\16NormalFloat\0\vNormal\0\1\0\1\abg\tnoneï\1\1\0\4\0\t\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0003\3\4\0=\3\5\2B\0\2\0016\0\6\0009\0\a\0'\2\b\0B\0\2\1K\0\1\0\25colorscheme kanagawa\bcmd\bvim\14overrides\0\1\0\2\16transparent\2\14overrides\0\nsetup\rkanagawa\frequire\0", "config", "kanagawa.nvim")
+time([[Config for kanagawa.nvim]], false)
+-- Config for: iron.nvim
+time([[Config for iron.nvim]], true)
+try_loadstring("\27LJ\2\n‹\6\0\0\b\0\31\00066\0\0\0'\2\1\0B\0\2\0029\1\2\0005\3\r\0005\4\3\0005\5\a\0005\6\5\0005\a\4\0=\a\6\6=\6\b\5=\5\t\0046\5\0\0'\a\n\0B\5\2\0029\5\v\5)\a<\0B\5\2\2=\5\f\4=\4\14\0035\4\15\0=\4\16\0035\4\17\0=\4\18\3B\1\2\0016\1\19\0009\1\20\0019\1\21\1'\3\22\0'\4\23\0'\5\24\0B\1\4\0016\1\19\0009\1\20\0019\1\21\1'\3\22\0'\4\25\0'\5\26\0B\1\4\0016\1\19\0009\1\20\0019\1\21\1'\3\22\0'\4\27\0'\5\28\0B\1\4\0016\1\19\0009\1\20\0019\1\21\1'\3\22\0'\4\29\0'\5\30\0B\1\4\1K\0\1\0\22<cmd>IronHide<cr>\14<space>rh\23<cmd>IronFocus<cr>\14<space>rF\25<cmd>IronRestart<cr>\14<space>rr\22<cmd>IronRepl<cr>\14<space>rs\6n\bset\vkeymap\bvim\14highlight\1\0\1\vitalic\2\fkeymaps\1\0\f\14send_file\14<space>rf\16visual_send\14<space>rc\14interrupt\20<space>r<space>\16send_motion\14<space>rc\acr\17<space>r<cr>\16remove_mark\15<space>rmd\16mark_visual\15<space>rmc\texit\14<space>rq\16mark_motion\15<space>rmc\14send_mark\14<space>rm\14send_line\14<space>rl\nclear\14<space>rx\vconfig\1\0\4\fkeymaps\0\14highlight\0\vconfig\0\23ignore_blank_lines\2\18repl_open_cmd\nright\14iron.view\20repl_definition\vpython\1\0\1\vpython\0\fcommand\1\0\1\fcommand\0\1\2\0\0\vpython\1\0\3\18repl_open_cmd\0\20repl_definition\0\17scratch_repl\2\nsetup\14iron.core\frequire\0", "config", "iron.nvim")
+time([[Config for iron.nvim]], false)
 -- Config for: hologram.nvim
 time([[Config for hologram.nvim]], true)
 try_loadstring("\27LJ\2\nK\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\17auto_display\2\nsetup\rhologram\frequire\0", "config", "hologram.nvim")
 time([[Config for hologram.nvim]], false)
+-- Config for: gitsigns.nvim
+time([[Config for gitsigns.nvim]], true)
+try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rgitsigns\frequire\0", "config", "gitsigns.nvim")
+time([[Config for gitsigns.nvim]], false)
+-- Config for: nvim-autopairs
+time([[Config for nvim-autopairs]], true)
+try_loadstring("\27LJ\2\n<\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
+time([[Config for nvim-autopairs]], false)
+-- Config for: toggleterm.nvim
+time([[Config for toggleterm.nvim]], true)
+try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15toggleterm\frequire\0", "config", "toggleterm.nvim")
+time([[Config for toggleterm.nvim]], false)
+-- Load plugins in order defined by `after`
+time([[Sequenced loading]], true)
+vim.cmd [[ packadd nvim-treesitter ]]
+vim.cmd [[ packadd render-markdown.nvim ]]
+
+-- Config for: render-markdown.nvim
+try_loadstring("\27LJ\2\nA\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\20render-markdown\frequire\0", "config", "render-markdown.nvim")
+
+time([[Sequenced loading]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
