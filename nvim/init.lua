@@ -1,13 +1,9 @@
-vim.wo.relativenumber = true
+require("config.remap") -- will call a file with the remaps
 
+require("core.options") -- editor defaults (indentation, etc.)
 
+require("core.lazy-nvim") -- package manager for my confi
 
--- Enable 24-bit color (usually already in init.lua)
-vim.opt.termguicolors = true
-
-require('artemConfig')
-require('artemConfig.lsp')
-require('artemConfig.packer')
-require('artemConfig.remap')
-require('artemConfig.colors')
-require('artemConfig.terminal')
+-- UI customizations
+require("ui.background") -- enable transparent background
+require("ui.numeric_lines")

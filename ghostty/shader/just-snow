@@ -1,4 +1,4 @@
-custom-shader = /Users/kaz/repos/ghostty-shaders/just-snow.glsl
+custom-shader = ../shaders/just-snow.glsl
 
 
 

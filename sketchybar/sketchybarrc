@@ -1,0 +1,127 @@
+#!/bin/bash
+
+source "$HOME/.config/sketchybar/colors.sh"
+
+PLUGIN_DIR="$HOME/.config/sketchybar/plugins"
+FONT="SF Pro"
+
+##### Bar Appearance #####
+sketchybar --bar height=32 \
+                 blur_radius=30 \
+                 position=top \
+                 sticky=off \
+                 display=all \
+                 topmost=window \
+                 padding_left=10 \
+                 padding_right=10 \
+                 color=0x00000000 \
+                 shadow=off
+
+##### Changing Defaults #####
+sketchybar --default updates=when_shown \
+                     icon.font="$FONT:Bold:14.0" \
+                     icon.color=0xffffffff \
+                     icon.padding_left=6 \
+                     icon.padding_right=6 \
+                     label.font="$FONT:Semibold:13.0" \
+                     label.color=0xffffffff \
+                     label.padding_left=6 \
+                     label.padding_right=6 \
+                     background.color=0x00000000 \
+                     background.border_color=0xff6c7086 \
+                     background.border_width=1 \
+                     background.corner_radius=5 \
+                     background.height=24 \
+                     background.padding_left=4 \
+                     background.padding_right=4
+
+##### AeroSpace Workspace Indicators #####
+# One item per monitor, shows active workspace on that monitor.
+# workspace_1 = always visible (primary or single monitor)
+# workspace_2 = hidden when single monitor, shown on dual monitor
+sketchybar --add event aerospace_workspace_change
+
+sketchybar --add item workspace_1 left \
+           --set workspace_1 icon.font="$FONT:Bold:15.0" \
+                             icon.padding_left=12 \
+                             icon.padding_right=12 \
+                             background.padding_left=4 \
+                             background.padding_right=4 \
+                             background.height=24 \
+                             background.drawing=on \
+                             label.drawing=off \
+                             script="$PLUGIN_DIR/aerospace.sh" \
+           --subscribe workspace_1 aerospace_workspace_change
+
+sketchybar --add item workspace_2 left \
+           --set workspace_2 icon.font="$FONT:Bold:15.0" \
+                             icon.padding_left=12 \
+                             icon.padding_right=12 \
+                             background.padding_left=4 \
+                             background.padding_right=4 \
+                             background.height=24 \
+                             background.drawing=off \
+                             label.drawing=off \
+                             script="$PLUGIN_DIR/aerospace.sh" \
+           --subscribe workspace_2 aerospace_workspace_change
+
+##### Left Items #####
+sketchybar --add item space_separator left \
+           --set space_separator icon="" \
+                                 icon.color=0xff6c7086 \
+                                 icon.padding_left=4 \
+                                 background.drawing=off
+
+sketchybar --add item front_app left \
+           --set front_app       script="$PLUGIN_DIR/front_app.sh" \
+                                 icon.drawing=off \
+                                 background.padding_left=4 \
+                                 background.padding_right=4 \
+           --subscribe front_app front_app_switched
+
+##### Center Items #####
+sketchybar --add item notion_calendar left \
+           --set notion_calendar script="$PLUGIN_DIR/notion_calendar.sh" \
+                                 update_freq=30 \
+                                 icon= \
+                                 icon.color=0xffffffff \
+                                 click_script="open -a 'Notion Calendar'" \
+                                 background.padding_left=4 \
+                                 background.padding_right=4
+
+##### Right Items #####
+sketchybar --add item clock right \
+           --set clock update_freq=10 \
+                       icon.drawing=off \
+                       script="$PLUGIN_DIR/clock.sh" \
+                       background.padding_left=4 \
+                       background.padding_right=4
+
+sketchybar --add item battery right \
+           --set battery script="$PLUGIN_DIR/battery.sh" \
+                         update_freq=120 \
+                         icon.drawing=off \
+                         background.padding_left=4 \
+                         background.padding_right=4 \
+           --subscribe battery system_woke power_source_change
+
+sketchybar --add item cpu right \
+           --set cpu script="$PLUGIN_DIR/cpu.sh" \
+                     update_freq=2 \
+                     icon.drawing=off \
+                     background.padding_left=4 \
+                     background.padding_right=4
+
+sketchybar --add item memory right \
+           --set memory script="$PLUGIN_DIR/memory.sh" \
+                        update_freq=2 \
+                        icon.drawing=off \
+                        background.padding_left=4 \
+                        background.padding_right=4
+
+##### Finalizing Setup #####
+sketchybar --update
+
+# Set initial aerospace state
+sketchybar --trigger aerospace_workspace_change \
+  FOCUSED_WORKSPACE="$(aerospace list-workspaces --focused 2>/dev/null)"
