@@ -1,4 +1,4 @@
-custom-shader = /Users/kaz/repos/ghostty-shaders/starfield-colors.glsl
+custom-shader = ../shaders/starfield-colors.glsl
 
 
 

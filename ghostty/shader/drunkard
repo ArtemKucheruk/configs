@@ -1,4 +1,4 @@
-custom-shader = /Users/kaz/repos/ghostty-shaders/drunkard.glsl
+custom-shader = ../shaders/drunkard.glsl
 
 
 

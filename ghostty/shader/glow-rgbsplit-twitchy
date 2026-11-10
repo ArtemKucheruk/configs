@@ -1,4 +1,4 @@
-custom-shader = /Users/kaz/repos/ghostty-shaders/glow-rgbsplit-twitchy.glsl
+custom-shader = ../shaders/glow-rgbsplit-twitchy.glsl
 
 
 

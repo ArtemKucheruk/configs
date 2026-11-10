@@ -1,4 +1,4 @@
-custom-shader = /Users/kaz/repos/ghostty-shaders/crt.glsl
+custom-shader = ../shaders/crt.glsl
 
 
 

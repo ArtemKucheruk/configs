@@ -24,7 +24,7 @@ alpha-blending = linear-corrected
 #     local CMD="sed -i '' 's:\(config-file = {1}\)/.*:\1/{2}:' $GHOSTTY_DIR/config && osascript -so -e 'tell application \"Ghostty\" to activate' -e 'tell application \"System Events\" to keystroke \",\" using {command down, shift down}'"
 #     fd \
 #       --type f \
-#       --exclude 'config' \
+#       --exclude 'config' --exclude shaders --exclude themes --exclude '*.md' \
 #       --base-directory $GHOSTTY_DIR \
 #     | fzf \
 #       --header="<ctrl-y> :: enable, don't exit" \
@@ -36,7 +36,7 @@ alpha-blending = linear-corrected
 config-file = font/lilex
 config-file = leading/default
 theme = Black Metal (Bathory) 
-config-file = opacity/70%
+config-file = opacity/40%
 config-file = shader/none
 
 # ~/.config/ghostty/config
